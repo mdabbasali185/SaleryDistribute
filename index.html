@@ -51,17 +51,17 @@
                         <input id="clothes" type="text">
                     </p>
                     <button id="calculate" class="btn button btn-primary fw-bold px-5">Calculate</button>
-                    <h3 class="fw-bold text-center text-secondary my-2">Total Expenses: 5500</h3>
-                    <h3 class="fw-bold text-center text-secondary my-2 mb-3">Balance:4500</h3>
-                    <p class="d-flex ">Save: <input class="mx-3" type="text"> % <button class="btn button btn-primary fw-bold px-5 mx-3">Save</button> </p>
-                    <h3 class="fw-bold text-center text-secondary my-2">Saving Amount: 2000</h3>
-                    <h3 class="fw-bold text-center text-secondary my-2 mb-5">Remaining Balance: 2500</h3>
+                    <h3 class="fw-bold text-center text-secondary my-2">Total Expenses:<span id="total-expenses">0</span> </h3>
+                    <h3 class="fw-bold text-center text-secondary my-2 mb-3">Balance:<span id="balance">0</span> </h3>
+                    <p class="d-flex ">Save: <input id="percent" class="mx-3" type="text"> % <button id="percent-save" class="btn button btn-primary fw-bold px-5 mx-3">Save</button> </p>
+                    <h3 class="fw-bold text-center text-secondary my-2">Saving Amount:<span id="saving-amount">0</span> </h3>
+                    <h3 class="fw-bold text-center text-secondary my-2 mb-5">Remaining Balance:<span id="remaining-balance">0</span> </h3>
                 </div>
             </div>
         </section>
     </main>
-    <div class="errorMsg" id="error-box">
-        <div class="error-box1 p-5 bg-danger" id="myModal">
+    <div class="errorMsg" id="error-msg">
+        <div class="error-box1 p-5 bg-danger" id="errorBox">
             <h3 class="text-white" id="modal_message"></h3>
         </div>
     </div>
