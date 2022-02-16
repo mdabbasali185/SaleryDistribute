@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salery-Distribute</title>
     <!-- css style -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -50,16 +50,22 @@
                         <label for="clothes">Clothes :</label>
                         <input id="clothes" type="text">
                     </p>
-                    <button class="btn button btn-primary fw-bold px-5">Calculate</button>
+                    <button id="calculate" class="btn button btn-primary fw-bold px-5">Calculate</button>
                     <h3 class="fw-bold text-center text-secondary my-2">Total Expenses: 5500</h3>
                     <h3 class="fw-bold text-center text-secondary my-2 mb-3">Balance:4500</h3>
-                    <p class="d-flex ">Save: <input class="mx-3" type="text"> % <input class="mx-3" type="text"> </p>
+                    <p class="d-flex ">Save: <input class="mx-3" type="text"> % <button class="btn button btn-primary fw-bold px-5 mx-3">Save</button> </p>
                     <h3 class="fw-bold text-center text-secondary my-2">Saving Amount: 2000</h3>
                     <h3 class="fw-bold text-center text-secondary my-2 mb-5">Remaining Balance: 2500</h3>
                 </div>
             </div>
         </section>
     </main>
+    <div class="errorMsg" id="error-box">
+        <div class="error-box1 p-5 bg-danger" id="myModal">
+            <h3 class="text-white" id="modal_message"></h3>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

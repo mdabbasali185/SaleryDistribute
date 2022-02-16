@@ -1,0 +1,34 @@
+header{
+    color:#31A5AC;
+}
+img{
+    max-width: 100%;
+}
+.account{
+    background: rgba(182, 176, 176, 0.055);
+}
+.account label{
+  width: 20%;
+
+}
+.account input{
+    width: 50%;
+}
+.errorMsg{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.363);
+    text-transform: capitalize;
+}
+
+.errorMsg .error-box1{
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
