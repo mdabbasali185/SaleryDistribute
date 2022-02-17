@@ -1,9 +1,12 @@
+/* header part  */
 header{
     color:#31A5AC;
 }
+/* img part */
 img{
     max-width: 100%;
 }
+/* accous section handeling */
 .account{
     background: rgba(182, 176, 176, 0.055);
 }
@@ -14,6 +17,7 @@ img{
 .account input{
     width: 50%;
 }
+/* error messages */
 .errorMsg{
     display: none;
     position: fixed;
