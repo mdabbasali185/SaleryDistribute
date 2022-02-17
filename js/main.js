@@ -18,12 +18,13 @@ function inputInnerValue(id) {
     return parseInt(textValue.value)
 }
 let balance = 0;
+let textNumberValue = 0;
 document.getElementById("calculate").addEventListener("click", function () {
-    let textNumberValue = inputInnerValue("income")
+    textNumberValue = inputInnerValue("income")
     let countFoodValue = inputInnerValue("food")
     let countRentValue = inputInnerValue("rent")
     let countClothesValue = inputInnerValue("clothes")
-    let total = countFoodValue + countFoodValue + countClothesValue
+    let total = countFoodValue + countRentValue + countClothesValue
     // error handeling
     if (isNaN(textNumberValue) || isNaN(countFoodValue) || isNaN(countRentValue) || isNaN(countClothesValue)) {
         errorFunction("fill up this box with number please.")
@@ -56,9 +57,14 @@ document.getElementById("percent-save").addEventListener("click", function () {
     else if (percent > 100) {
         errorFunction("You can't save more money that you have")
     } else {
-        let saving = ((balance * percent) / 100).toFixed(2)
-        document.getElementById("saving-amount").innerText = saving
-        document.getElementById("remaining-balance").innerText = (balance - saving).toFixed(2)
+        let saving = ((textNumberValue * percent) / 100).toFixed(2)
+        if (saving > balance) {
+            errorFunction("You can't save more money that you have")
+        }
+        else {
+            document.getElementById("saving-amount").innerText = saving
+            document.getElementById("remaining-balance").innerText = (balance - saving).toFixed(2)
+        }
     }
     inputClear(["percent"])
 })
